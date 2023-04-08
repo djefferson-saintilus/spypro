@@ -1,6 +1,6 @@
 # SpyPro - The Automate
 #### auteur : *Djefferson Saintilus*
-[a relative link](./bannerOfficial.svg)
+![image](./bannerOfficial.svg)
 
 SpyPro, automatise les tâches dans les etapes du pentest depuis la reconnaissance jusqu'a l'exploitation
 de la cible, il est orientee CTF, et est a but educatif. Pour l'instant c'est supportée pour les box linux, 

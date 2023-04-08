@@ -1,4 +1,4 @@
-# spypro
+# SpyPro - The automate
 Il automatise les tâches dans les etapes du pentest depuis la reconnaissance jusqu'a l'exploitation
 de la machine, pour l'instant c'est supportée pour les box linux, et je conseille que vous tenez 
 votre cahier de note a la main pour tout

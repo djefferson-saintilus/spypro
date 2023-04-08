@@ -20,3 +20,4 @@ _______________________________________________________
 - identifier l'OS si c'est linux ou windows, très rapide par une methode très optimiser
 - faire une scan nmap, niveau novice-maitre-expert
 
+to be continued ...

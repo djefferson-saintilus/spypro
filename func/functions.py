@@ -1,4 +1,4 @@
-import time,subprocess,os
+import time,subprocess,os,argparse
 # list all functions
 def bannerSpyPro():
 	# banner 
@@ -33,6 +33,7 @@ choose an option from [1-2]:
 2. basic nmap scan
 """)
 
+#os Discovery
 def osDiscovery():
 	os.system("clear")
 	bannerSpyPro()
@@ -49,6 +50,9 @@ def osDiscovery():
 	elif(result1==123 or result1==124):
 		print("\n === Operating system ====")
 		print("\n OS : Windows")
+# end 
+
+# basic Nmap
 def basicNmap():
 	os.system("clear")
 	bannerSpyPro()
@@ -58,3 +62,9 @@ def basicNmap():
 	time.sleep(1)
 	print("\n === Port Scan ====")
 	os.system(f"nmap {ip} -sV -p1-1000 | grep 'open' | sed -E 's/(open)/\\x1b[31m\\1\\x1b[0m/g'")
+#end
+
+def manual():
+	parser = argparse.ArgumentParser(description='My program')
+	parser.add_argument('--h', action='help', help='Show this help message and exit')
+	args = parser.parse_args()

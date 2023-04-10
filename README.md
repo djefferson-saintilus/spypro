@@ -19,6 +19,7 @@ et je conseille que vous tenez votre cahier de note a la main pour tout. Nous ut
 ## 1. spypro v1.0 fonctionnalités
 _______________________________________________________
 - identifier l'OS si c'est linux ou windows, très rapide par une methode très optimiser
-- faire une scan nmap, niveau novice-maitre-expert
+- faire une scan nmap basic, avec version et etat, dans une rangee de port les plus courants
+port 1-1000
 
 to be continued ...

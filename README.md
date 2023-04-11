@@ -10,7 +10,7 @@ et je conseille que vous tenez votre cahier de note a la main pour tout. Nous ut
 `python3`
 
 ## suppported by
-`Linux/Unix`
+`Kali-linux/ParrotOS`
 
 ## public concerné
 `Pentester | Hacker | CTFPlayer | Ethical Hacker`

@@ -10,7 +10,7 @@ et je conseille que vous tenez votre cahier de note a la main pour tout. Nous ut
 `python3`
 
 ## suppported by
-`Kali-linux/ParrotOS`
+`Kali-Linux || Parrot OS`
 
 ## public concerné
 `Pentester | Hacker | CTFPlayer | Ethical Hacker`
@@ -18,8 +18,12 @@ et je conseille que vous tenez votre cahier de note a la main pour tout. Nous ut
 
 ## 1. spypro v1.0 fonctionnalités
 _______________________________________________________
-- identifier l'OS si c'est linux ou windows, très rapide par une methode très optimiser
-- faire une scan nmap basic, avec version et etat, dans une rangee de port les plus courants
-port 1-1000
+- recherche de l'OS si c'est linux ou windows(TTL OS identifier)
+- faire une scan nmap global, avec version et etat, dans une rangee de port les plus courants
+port --65335, suivi d'une nmap ciblee en fonction des resultats precedent
+- recherche d'un parefeu web
+- recherche de sous-domains inclus zone de transfer
+- recherche de banniere web 
+- recherche de robots.txt 
 
 to be continued ...

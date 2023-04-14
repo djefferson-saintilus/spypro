@@ -23,7 +23,7 @@ _______________________________________________________
 - faire une scan nmap global, avec version et etat, dans une rangee de port les plus courants
 port --65335, suivi d'une nmap ciblee en fonction des resultats precedent
 
--- NEW UPDATE --
+-- NEW UPDATE -- v1.1
 - recherche d'un parefeu web
 - recherche de sous-domains inclus zone de transfer
 - recherche de banniere web 

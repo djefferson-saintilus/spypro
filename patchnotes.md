@@ -8,5 +8,4 @@
 2. utilisation de nombreuses fonctions et commentaires pour faciliter la comprehension
 3. ajout de nouvelles fonctionalites(cf: README)
 4. categorisatoin des fichiers
-5. correction des erreurs de valeurs et de nombrage de variable
-6. 
+5. correction des erreurs de valeurs, de variable, de conditions

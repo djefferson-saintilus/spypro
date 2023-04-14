@@ -2,9 +2,10 @@
 #### auteur : *Djefferson Saintilus*
 ![image](./bannerOfficial.svg)
 
-SpyPro, automatise les tâches dans les etapes du pentest depuis la reconnaissance jusqu'a l'exploitation
-de la cible, il est orientee CTF, et est a but educatif. Pour l'instant c'est supportée pour les box linux, 
-et je conseille que vous tenez votre cahier de note a la main pour tout. Nous utilisons la méthodologie de PTES.
+SpyPro, automatise le pentesting depuis la reconnaissance jusqu'à l'exploitation
+de la cible, il est orientée CTF, et est à but educatif. Pour l'instant c'est supportée 
+pour les box linux, et je conseille que vous tenez votre cahier de note à la main pour tout 
+pour sortir votre rapport final. J'utilise la méthodologie de PTES.
 
  ## prerequis: 
 `python3`

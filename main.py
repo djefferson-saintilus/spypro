@@ -2,7 +2,7 @@
 #coding:utf-8
 #author : Djefferson saintilus
 #spypro v1.0
-import func.functions as fc
+import config.func.functions as fc
 fc.manual() #help 
 
 # Main

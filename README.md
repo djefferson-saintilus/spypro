@@ -21,6 +21,8 @@ _______________________________________________________
 - recherche de l'OS si c'est linux ou windows(TTL OS identifier)
 - faire une scan nmap global, avec version et etat, dans une rangee de port les plus courants
 port --65335, suivi d'une nmap ciblee en fonction des resultats precedent
+
+-- NEW UPDATE --
 - recherche d'un parefeu web
 - recherche de sous-domains inclus zone de transfer
 - recherche de banniere web 

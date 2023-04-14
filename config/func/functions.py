@@ -62,7 +62,7 @@ def osDiscovery():
 # basic Nmap
 def basicNmap():
 	os.system("clear")
-	bannerSpyPro()
+	#bannerSpyPro()
 	####################
 	# basic nmap scan
 	print("[+] Basic Nmap Scan [+] \n")
@@ -71,6 +71,7 @@ def basicNmap():
 	time.sleep(1)
 	print("\n === Port Scan ====")
 	os.system(f"nmap {ip} -n -T5 -p1-65535 --open -oN /tmp/nmap.txt | grep 'open' | sed -E 's/(open)/\\x1b[31m\\1\\x1b[0m/g'")
+
 	# end basic nmap
 	##################
 	print("")
@@ -80,7 +81,7 @@ def basicNmap():
 	moreInfo=str(input("sp1 > "))
 	if(moreInfo=="yes" or moreInfo=="Y" or moreInfo=="YES" or moreInfo=="y"):
 		os.system("clear")
-		bannerSpyPro()
+		#bannerSpyPro()
 		os.system("grep -oP '\\d+(?=/tcp)' /tmp/nmap.txt | tr '\n' ',' | sed 's/,$//' > /tmp/port_numbers.txt")
 		with open("/tmp/port_numbers.txt", "r") as f:
 			portValues = f.readline().strip()
@@ -92,7 +93,7 @@ def basicNmap():
 	#end nmap targeted
 	#######################
 #end
-
+basicNmap()
 
 def manual():
 	parser = argparse.ArgumentParser(description='My program')

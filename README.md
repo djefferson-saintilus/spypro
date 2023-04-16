@@ -6,6 +6,7 @@ SpyPro, automatise le pentesting depuis la reconnaissance jusqu'à l'exploitatio
 de la cible, il est orientée CTF, et est à but educatif. Pour l'instant c'est supportée 
 pour les box linux, et je conseille que vous tenez votre cahier de note à la main pour tout 
 pour sortir votre rapport final. J'utilise la méthodologie de PTES. L'outil est en anglais.
+L'outil utilise le dir /tmp pour sauvegarder vos actions.
 
  ## pré-requis: 
 `python3`

@@ -1,6 +1,6 @@
 # SpyPro - The Automate
 #### auteur : *Djefferson Saintilus*
-![image](./bannerOfficial.svg)
+![image](./config/bannerOfficial.svg)
 
 SpyPro, automatise le pentesting depuis la reconnaissance jusqu'à l'exploitation
 de la cible, il est orientée CTF, et est à but educatif. Pour l'instant c'est supportée 

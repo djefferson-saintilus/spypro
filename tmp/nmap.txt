@@ -1,8 +1,11 @@
-# Nmap 7.93 scan initiated Sat Apr 22 05:00:53 2023 as: nmap -Pn -n -T5 -p1-65535 --open --min-rate 5000 -oN ./tmp/nmap.txt 10.0.0.159
-Nmap scan report for 10.0.0.159
-Host is up (0.00022s latency).
-Not shown: 65534 closed tcp ports (conn-refused)
+# Nmap 7.93 scan initiated Thu May 25 04:43:32 2023 as: nmap -Pn -n -T5 -p1-65535 --open --min-rate 5000 -oN ./tmp/nmap.txt 127.0.0.1
+Nmap scan report for 127.0.0.1
+Host is up (0.00019s latency).
+Not shown: 65531 closed tcp ports (conn-refused)
 PORT      STATE SERVICE
-33330/tcp open  unknown
+80/tcp    open  http
+102/tcp   open  iso-tsap
+9876/tcp  open  sd
+41129/tcp open  unknown
 
-# Nmap done at Sat Apr 22 05:00:56 2023 -- 1 IP address (1 host up) scanned in 2.69 seconds
+# Nmap done at Thu May 25 04:43:33 2023 -- 1 IP address (1 host up) scanned in 2.01 seconds

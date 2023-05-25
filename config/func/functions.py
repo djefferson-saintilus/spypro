@@ -1,6 +1,6 @@
 #coding:utf-8
 
-import time,subprocess,os,argparse,re,sys,threading
+import time,subprocess,os,argparse,re,sys,threading,asyncio,aiohttp
 # list all functions
 def bannerSpyPro():
 	# banner 
@@ -33,10 +33,11 @@ Enter an option (0-6):
 
 1. check OS signature
 2. check open ports 1-65535, and targeted
-3. lorem
+3. check directory Listing
 4. check robots.txt
 5. check subdomains
 6. check zone-transfer
+7. check web banner
 0. back
 
 """)
@@ -54,7 +55,7 @@ def get_valid_ip():
 
 #os Discovery
 def osDiscovery():
-	os.system("clear")
+	subprocess.call("clear", shell=True)
 	bannerSpyPro()
 	print("[+] OS Discovery [+] \n")
 	ip = get_valid_ip()
@@ -87,12 +88,19 @@ def osDiscovery():
 
 def animate_progress(stop_event):
     while not stop_event.is_set():
-        for symbol in "|/-\\":
-            print("\rScanning in progress... " + symbol, end="", flush=True)
-            time.sleep(0.1)
+        print("Scanning in progress... |", end="\r")
+        time.sleep(0.5)
+        print("Scanning in progress... /", end="\r")
+        time.sleep(0.5)
+        print("Scanning in progress... -", end="\r")
+        time.sleep(0.5)
+        print("Scanning in progress... \\", end="\r")
+        time.sleep(0.5)
+    print(" " * 30, end="\r")  # Clear progress animation line
+
 # basic Nmap
 def basicNmap():
-	os.system("clear")
+	subprocess.call("clear", shell=True)
 	bannerSpyPro()
 	####################
 	print("[+] Basic Nmap Scan [+] \n")
@@ -154,12 +162,111 @@ def basicNmap():
 	except subprocess.CalledProcessError as e:
 		print("\033[91mError occurred while scanning.\033[0m")
 
-
 	# end basic nmap
 	##################
 	print("")
 	#######################
 #end
+
+def dirListing():
+    subprocess.call("clear", shell=True)
+    bannerSpyPro()
+    ####################
+    print("[+] Directory Listing [+]\n")
+    ip = get_valid_ip()
+    print("Enter the wordlist file (default press ENTER):")
+    wordlist = input()
+    
+    if wordlist == "":
+        wordlist = "/usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt"
+    
+    command = f"gobuster dir -u {ip} -w {wordlist} -q -t 40"
+    stop_event = threading.Event()
+    progress_thread = threading.Thread(target=animate_progress, args=(stop_event,))
+    progress_thread.start()
+    output = subprocess.check_output(command, shell=True, universal_newlines=True)
+    stop_event.set()
+    progress_thread.join()
+    print("Scanning completed.\n")
+    
+    # Filter and display the directories found
+    print("[+] Directories Found:\n")
+    lines = (line for line in output.splitlines())
+    directories = set()
+    for line in lines:
+        if "(Status: 301)" in line or "(Status: 302)" in line:
+            directory = line.split()[0]
+            directories.add(directory)
+    
+    if directories:
+        for directory in directories:
+            print(directory)
+    else:
+        print("No directories found.")
+    
+    time.sleep(5)
+
+#check robots.txt
+def fetch_robots_txt(urlCheck):
+    robots_url = f"http://{urlCheck}/robots.txt"
+    async def fetch():
+        async with aiohttp.ClientSession() as session:
+            async with session.get(robots_url, allow_redirects=True) as response:
+                if response.status == 200:
+                    print("\n[+] Robots.txt Found: \n")
+                    robots_content = await response.text()
+                    print(robots_content)
+                else:
+                    print("\n[-] Robots.txt Not Found.")
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(fetch())
+
+def get_valid_ip_dns():
+    while True:
+        print("Enter an IP address or DNS: ")
+        ip_dns = input("sp1 > ")
+
+        # Check if the input matches the IP address format
+        ip_regex = r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$'
+        dns_regex = r'^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])' \
+                    r'(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9]))*$'
+
+        if re.match(ip_regex, ip_dns) or re.match(dns_regex, ip_dns):
+            # Verify if the host is online
+            if is_host_online(ip_dns):
+                return ip_dns
+            else:
+                print("Host is not online. Please try again.")
+        else:
+            print("Invalid input. Please try again.")
+
+def is_host_online(ip_dns):
+    # Use ping command to check if the host is online
+    try:
+        subprocess.check_output(['ping', '-c', '1', ip_dns])
+        return True
+    except subprocess.CalledProcessError:
+        return False
+
+def check_robots_txt():
+    subprocess.call("clear", shell=True)
+    bannerSpyPro()
+    print("[+] Check robots.txt [+]")
+    urlCheck = get_valid_ip_dns()
+    time.sleep(1)
+    stop_event = threading.Event()
+    progress_thread = threading.Thread(target=animate_progress, args=(stop_event,))
+    progress_thread.start()
+
+    # Function check start
+    fetch_robots_txt(urlCheck)
+    # Function check end
+
+    stop_event.set()
+    progress_thread.join()
+    print("Scanning completed.\n")
+
+    time.sleep(5)
 
 def manual():
 	parser = argparse.ArgumentParser(description='My program')

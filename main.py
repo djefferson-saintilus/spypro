@@ -32,7 +32,7 @@ while True:
 				# end banner/menu
 					try:
 						choice1=int(input("sp1 > "))
-						if choice1 not in range(0, 7):
+						if choice1 not in range(0, 8):
 							print("\033[91mInvalid option. Please enter a number between 0 and 7.\033[0m")
 						elif choice1 == 0:
 							break
@@ -44,12 +44,14 @@ while True:
 							elif (choice1==2):
 								fc.basicNmap()
 							elif (choice1==3):
-								print("Please wait ...")
+								fc.dirListing()
 							elif (choice1==4):
-								print("Please wait ...")
+								fc.check_robots_txt()
 							elif (choice1==5):
 								print("Please wait ...")
 							elif (choice1==6):
+								print("Please wait ...")
+							elif (choice1==7):
 								print("Please wait ...")
 							else:
 								print("\033[91mInvalid option. Please enter a number between 0 and 7.\033[0m\n")
@@ -68,6 +70,6 @@ while True:
 				break
 			else:
 				print("\033[91mInvalid option. Please enter a number between 1 and 5.\033[0m")
-
+		print("Thanks for using SpyPro")
 	except ValueError:
 		print("\033[91mInvalid option. Please enter a nuMber between 1 and 5.\033[0m")

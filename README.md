@@ -1,33 +1,59 @@
 # SpyPro - The Automate
-#### auteur : *Djefferson Saintilus*
+#### Author: *Djefferson Saintilus*
 ![image](./config/bannerOfficial.svg)
 
-SpyPro, automatise le pentesting depuis la reconnaissance 
-jusqu'à l'exploitation de la cible, il est orientée CTF, 
-et est à but educatif. Pour l'instant c'est supportée pour 
-les box linux, et je conseille que vous tenez votre cahier 
-de note à la main pour tout pour sortir votre rapport final. 
-J'utilise la méthodologie de PTES. L'outil est en anglais et 
-l'outil utilise la base de donnee de Kali-linux pour charger 
-la plupart des outils.
+SpyPro automates the pentesting process from reconnaissance to target exploitation. It is designed for CTF (Capture The Flag) challenges and has an educational purpose. Currently, it supports Linux boxes, and it is recommended to keep a manual notebook for all notes and the final report. The tool follows the PTES (Penetration Testing Execution Standard) methodology. It is in English and utilizes the Kali Linux database to load most of the tools.
 
- ## pré-requis: 
-`python3`
+## Prerequisites
+- `python3`
 
-## supportée par :
-`Kali-Linux || Parrot OS`
+## Supported by:
+- `Kali-Linux`
+- `Parrot OS`
 
-## public concerné
-`Pentester | Hacker | CTFPlayer | Ethical Hacker`
+## Target Audience
+- Pentesters
+- Hackers
+- CTF Players
+- Ethical Hackers
 
+## Installation
 
-## 1. spypro v1.0 fonctionnalités
+1. Clone the SpyPro repository:
+```
+git clone https://github.com/your-username/SpyPro.git
+```
+2. Install the required dependencies:
+```
+pip install -r requirements.txt
+```
+3. Start SpyPro:
+```
+python main.py
+```
+
+## 1. SpyPro v1.0 Features
 _______________________________________________________
-- recherche de l'OS si c'est linux ou windows(TTL OS identifier)
-- faire une scan nmap global, avec version et état, sur une rangée de 
-65335 port après suivi d'une nmap ciblée en fonction des résultats précédentes.
+- OS detection (Linux or Windows) using TTL OS identifier
+- Perform a global Nmap scan with version and state on a range of 65335 ports, followed by a targeted Nmap scan based on the previous results.
 
 -- NEW UPDATE -- v1.1
-- recherche de web repertoire
+- Web directory enumeration
 
 to be continued ...
+
+## Contributing
+
+Contributions to SpyPro are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+```
+
+Feel free to modify and customize this overview to fit your project's specific details. Add sections, badges, or project-specific information as needed.
+
+Remember to update the installation instructions, repository link, and other details to match your project's specific setup.
+
+I hope this helps you create an engaging overview for your project!

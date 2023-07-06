@@ -15,4 +15,6 @@
 9. optimisation du code, plus de fonctions et de variable
 10. ajout de fonctionnalite de faire dirlisting(propre algorithme), recherche vulnerabilite depuis exploit-db
 11. tout va bien mais juste pour le robots.txt, il y'a repetions dans l'affichage de la barre de progression mais ca cause rien au scan
-12.
+12. webcrawling,dns enum, email harvesting, wappalyzer-cli, dns zonetransfer
+13. more userfriendly, verify all scripts, modules, and files before program starting
+14. color message error

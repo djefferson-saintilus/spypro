@@ -15,13 +15,14 @@ def menu():
 	print("""
 [+]  Pentest steps [+]
 
-Enter an option (1-5):
+Enter an option (0-5):
 
 1. Information Gahtering
 2. Vulnerability analysis
 3. Exploitation
 4. Post-Exploitation
 5. Reporting
+0. Quit 
 
 """)
 

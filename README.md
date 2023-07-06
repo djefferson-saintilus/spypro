@@ -51,9 +51,11 @@ Contributions to SpyPro are welcome! If you have any suggestions, bug reports, o
 This project is licensed under the MIT License.
 
 ```
+Copyright 2019
 
-Feel free to modify and customize this overview to fit your project's specific details. Add sections, badges, or project-specific information as needed.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Remember to update the installation instructions, repository link, and other details to match your project's specific setup.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-I hope this helps you create an engaging overview for your project!
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```

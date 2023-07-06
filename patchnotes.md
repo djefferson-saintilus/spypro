@@ -1,4 +1,3 @@
-
 # Patchnotes
 
 - v1.0
@@ -18,3 +17,4 @@
 12. webcrawling,dns enum, email harvesting, wappalyzer-cli, dns zonetransfer
 13. more userfriendly, verify all scripts, modules, and files before program starting
 14. color message error
+15. add 'requirements.txt' for better installation of modules

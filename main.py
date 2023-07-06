@@ -132,6 +132,7 @@ class SpyPro:
         file_paths = [
             "config/func/functions.py",
             "config/bannerOfficial.txt",
+            "requirements.txt"
 
             # Add other required file paths here
         ]

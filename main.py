@@ -3,6 +3,8 @@ import importlib,time
 import colorama
 from colorama import Fore, Style
 import config.func.functions as fc
+import config.func.allMenu as Mn
+
 
 fc.manual()  # help
 colorama.init()
@@ -22,7 +24,7 @@ class SpyPro:
         
         while True:
             self.show_banner()
-            fc.menu()
+            Mn.menu()
             invalid_choices = 0
             
             while invalid_choices < self.max_invalid_choices:
@@ -60,7 +62,7 @@ class SpyPro:
     def info_gathering_menu(self):
         while True:
             self.show_banner()
-            fc.menuInfoGathering()
+            Mn.menuInfoGathering()
             invalid_choices = 0
             
             while invalid_choices < self.max_invalid_choices:
@@ -110,9 +112,7 @@ class SpyPro:
                     return
     
     def verify_initialization(self):
-        print("Verifying initialization...")
-        print("Please wait ...")
-        
+        print("Verifying initialization...")        
         # Progress indicator
         progress_symbols = ["|", "/", "-", "\\"]
         start_time = time.time()
@@ -120,7 +120,7 @@ class SpyPro:
         
         while elapsed_time < 2:
             for symbol in progress_symbols:
-                print(f"\r{symbol} Verifying...", end="", flush=True)
+                print(f"\r{symbol} Please wait while Verifying...", end="", flush=True)
                 time.sleep(0.2)
             
             elapsed_time = time.time() - start_time
@@ -132,7 +132,8 @@ class SpyPro:
         file_paths = [
             "config/func/functions.py",
             "config/bannerOfficial.txt",
-            "requirements.txt"
+            "requirements.txt",
+            "config/func/allMenu.py"
 
             # Add other required file paths here
         ]
@@ -141,9 +142,10 @@ class SpyPro:
             if not os.path.exists(file_path):
                 missing_files.append(file_path)
         
-        # Verify modules
+        # Verify local modules
         modules = [
             "config.func.functions",
+            "config.func.allMenu"
             # Add other required modules here
         ]
         missing_modules = []

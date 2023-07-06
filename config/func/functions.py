@@ -1,6 +1,7 @@
 #coding:utf-8
 
 import time,subprocess,os,argparse,re,sys,threading,asyncio,aiohttp
+
 # list all functions
 def bannerSpyPro():
 	# banner 
@@ -10,38 +11,6 @@ def bannerSpyPro():
 	print("version : 1.1 \n")
 	# end banner
 
-def menu():
-	# Menu
-	print("""
-[+]  Pentest steps [+]
-
-Enter an option (0-5):
-
-1. Information Gahtering
-2. Vulnerability analysis
-3. Exploitation
-4. Post-Exploitation
-5. Reporting
-0. Quit 
-
-""")
-
-def menuInfoGathering():
-	print("""
-[+] Information Gahtering [+]
-
-Enter an option (0-6):
-
-1. check OS signature
-2. check open ports 1-65535, and targeted
-3. check directory Listing
-4. check robots.txt
-5. check subdomains
-6. check zone-transfer
-7. check web banner
-0. back
-
-""")
 #filter ip
 def get_valid_ip():
 	while True:
